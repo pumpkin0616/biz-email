@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "paths": {
+      "@extensions": [
+        "./src"
+      ],
+      "@extensions/*": [
+        "./src/*"
+      ],
+      "biz-email-core": [
+        "../biz-email-core"
+      ],
+      "biz-email-editor": [
+        "../biz-email-editor"
+      ]
+    }
+  }
+}

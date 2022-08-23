@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client", "node"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "alwaysStrict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": false,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@demo": ["src"],
+      "@demo/*": ["src/*"],
+      "biz-email-editor": ["../packages/biz-email-editor/src/index.tsx"],
+      "biz-email-core": ["../packages/biz-email-core/src/index.tsx"],
+      "biz-email-extensions": [
+        "../packages/biz-email-extensions/src/index.tsx"
+      ],
+      "biz-email-config-panel": [
+        "../packages/biz-email-config-panel/src/index.tsx"
+      ]
+    }
+  },
+  "include": ["./src", "./example", "./typings"],
+  "exclude": ["node_modules"]
+}
