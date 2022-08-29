@@ -68,19 +68,19 @@ export const Social: IBlock<ISocial> = createBlock({
             {
               href: '#',
               target: '_blank',
-              src: getImg('IMAGE_02'),
+              src: '',
               content: 'Facebook',
             },
             {
               href: '#',
               target: '_blank',
-              src: getImg('IMAGE_03'),
-              content: 'Google',
+              src: '',
+              content: 'instagram',
             },
             {
               href: '',
               target: '_blank',
-              src: getImg('IMAGE_04'),
+              src: '',
               content: 'Twitter',
             },
           ],
