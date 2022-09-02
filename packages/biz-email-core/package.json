@@ -2,7 +2,7 @@
     "name": "biz-email-core",
     "license": "MIT",
     "description": "Email editor",
-    "version": "0.0.7",
+    "version": "0.0.10",
     "author": "m-Ryan",
     "repository": {
         "type": "git",

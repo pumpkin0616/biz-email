@@ -246,3 +246,10 @@ $ yarn dev
 ## License
 
 The MIT License
+
+## 发布到 NPM
+
+1. npm login
+2. 修改版本
+3. npm run build
+4. npm publish
