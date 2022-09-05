@@ -2,7 +2,7 @@
     "name": "biz-email-editor",
     "license": "MIT",
     "description": "Email editor",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "author": "m-Ryan",
     "repository": {
         "type": "git",
@@ -35,7 +35,7 @@
     "dependencies": {
         "@types/final-form-set-field-touched": "^1.0.0",
         "@types/is-hotkey": "^0.1.7",
-        "biz-email-core": "0.0.10",
+        "biz-email-core": "0.0.11",
         "final-form": "^4.20.4",
         "final-form-arrays": "^3.0.2",
         "final-form-set-field-touched": "^1.0.1",
