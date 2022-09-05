@@ -67,7 +67,21 @@ export function ColorPicker(props: ColorPickerProps) {
               cursor: 'pointer',
             }}
           >
-            {props.value ? (
+            <span
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  border:
+                    '1px solid var(--color-neutral-3, rgb(229, 230, 235))',
+
+                  borderRadius: 2,
+                  width: '100%',
+                  height: '100%',
+                  textAlign: 'center',
+                  backgroundColor: value,
+                }}
+              />
+            {/* {props.value ? (
               <span
                 style={{
                   position: 'relative',
@@ -92,7 +106,7 @@ export function ColorPicker(props: ColorPickerProps) {
                 }}
                 src={getImg('AttributePanel_02')}
               />
-            )}
+            )} */}
             <style>
               {`
                 [title="${transparentColor}"] {

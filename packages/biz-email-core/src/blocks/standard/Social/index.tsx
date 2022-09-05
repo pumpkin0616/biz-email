@@ -66,13 +66,13 @@ export const Social: IBlock<ISocial> = createBlock({
         value: {
           elements: [
             {
-              href: '#',
+              href: '',
               target: '_blank',
               src: '',
               content: 'Facebook',
             },
             {
-              href: '#',
+              href: '',
               target: '_blank',
               src: '',
               content: 'instagram',

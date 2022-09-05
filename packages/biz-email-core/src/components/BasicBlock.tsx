@@ -26,7 +26,7 @@ export function BasicBlock(props: {
     data.children.length === 0
   ) {
     content = placeholder;
-  }
+  }  
 
   if (mode === 'testing' && tag === 'mj-image') {
     let url = data.attributes.src;
@@ -40,9 +40,7 @@ export function BasicBlock(props: {
 
       return (
         <>
-          {`<${tag} ${getAdapterAttributesString(adapterData)} src="${getImg(
-            'IMAGE_59'
-          )}">`}
+          {`<${tag} ${getAdapterAttributesString(adapterData)} src="">`}
 
           {`</${tag}>`}
         </>

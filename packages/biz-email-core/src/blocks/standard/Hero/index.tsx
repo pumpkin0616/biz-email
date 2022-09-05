@@ -39,7 +39,7 @@ export const Hero = createBlock<IHero>({
         mode: 'fluid-height',
         padding: '100px 0px 100px 0px',
         'vertical-align': 'top',
-        'background-url': getImg('IMAGE_31'),
+        'background-url':'',
       },
       children: [
         {
@@ -52,7 +52,7 @@ export const Hero = createBlock<IHero>({
           attributes: {
             padding: '10px 25px 10px 25px',
             align: 'center',
-            color: '#ffffff',
+            color: '#000000',
             'font-size': '45px',
             'line-height': '45px',
           },
@@ -69,7 +69,7 @@ export const Hero = createBlock<IHero>({
           attributes: {
             align: 'center',
             'background-color': '#414141',
-            color: '#ffffff',
+            color: '#000000',
             'font-weight': 'normal',
             'border-radius': '3px',
             padding: '10px 25px 10px 25px',
@@ -105,7 +105,7 @@ export const Hero = createBlock<IHero>({
             'vertical-align': 'middle',
             border: 'none',
             'text-align': 'center',
-            href: '#',
+            href: '',
           },
           children: [],
         },
