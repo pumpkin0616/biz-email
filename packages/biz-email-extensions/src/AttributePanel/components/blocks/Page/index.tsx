@@ -28,6 +28,7 @@ export function Page() {
               <InputWithUnitField
                 label='Width'
                 name={`${focusIdx}.attributes.width`}
+                helpText= "Width % is not supported, you can set it to 1920px or more to achieve 100% effect."
                 inline
               />
               <InputWithUnitField
