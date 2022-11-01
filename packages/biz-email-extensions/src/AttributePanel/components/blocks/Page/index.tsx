@@ -23,8 +23,8 @@ export function Page() {
         <Collapse defaultActiveKey={['0', '1']}>
           <Collapse.Item name='0' header='Email Setting'>
             <Space direction='vertical'>
-              <TextField label='Subject' name={'subject'} inline />
-              <TextField label='SubTitle' name={'subTitle'} inline />
+              {/* <TextField label='Subject' name={'subject'} inline />
+              <TextField label='SubTitle' name={'subTitle'} inline /> */}
               <InputWithUnitField
                 label='Width'
                 name={`${focusIdx}.attributes.width`}
