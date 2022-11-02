@@ -2,9 +2,9 @@ import { IBlock } from '@core/typings';
 import { EMAIL_BLOCK_CLASS_NAME } from '@core/constants';
 
 import { isString } from 'lodash';
-
 import { classnames } from '@core/utils/classnames';
 import { getNodeIdxClassName, getNodeTypeClassName } from '@core/utils';
+
 export function getAdapterAttributesString(
   params: Parameters<IBlock['render']>[0]
 ) {
@@ -32,7 +32,12 @@ export function getAdapterAttributesString(
   let attributeStr = '';
   for (let key in attributes) {
     const keyName = key as keyof typeof attributes;
-    const val = attributes[keyName];
+    let val = attributes[keyName];
+    if (keyName && val && (keyName === 'src' || keyName === 'background-url')) {
+      const oldSrc = val;
+      val = transformOssUrl(val)
+      console.log(`原图:${oldSrc} 转换图:${val}`)
+    }
     if (isString(val) && val) {
       const splitter = ' ';
       attributeStr += `${key}="${val.replace(/"/gm, '')}"` + splitter;

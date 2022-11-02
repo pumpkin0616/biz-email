@@ -21,7 +21,6 @@ import { previewLoadImage } from '@extensions/AttributePanel/utils/previewLoadIm
 import { MergeTags } from '@extensions';
 import { Button as ArcoButton } from '@arco-design/web-react';
 import { IconFont, useEditorProps } from 'biz-email-editor';
-
 export interface ImageUploaderProps {
   onChange: (val: string) => void;
   value: string;
@@ -123,7 +122,7 @@ export function ImageUploader(props: ImageUploaderProps) {
     return (
       <div className={styles['item']}>
         <div className={classnames(styles['info'])}>
-          <img src={props.value} />
+          <img src={transformOssUrl(props.value)} />
           <div className={styles['btn-wrap']}>
             <a title='Preview' onClick={() => setPreview(true)}>
               <IconEye />
