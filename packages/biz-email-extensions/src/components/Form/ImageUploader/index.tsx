@@ -28,7 +28,11 @@ export interface ImageUploaderProps {
   uploadHandler?: UploaderServer;
   autoCompleteOptions?: Array<{ value: string; label: React.ReactNode; }>;
 }
+interface Window {
+  transformOssUrl: any;//全局变量名
+}
 
+declare const window: any;
 export function ImageUploader(props: ImageUploaderProps) {
   const { mergeTags } = useEditorProps();
   const [isUploading, setIsUploading] = useState(false);
@@ -122,7 +126,7 @@ export function ImageUploader(props: ImageUploaderProps) {
     return (
       <div className={styles['item']}>
         <div className={classnames(styles['info'])}>
-          <img src={transformOssUrl(props.value)} />
+          <img src={window.transformOssUrl(props.value)} />
           <div className={styles['btn-wrap']}>
             <a title='Preview' onClick={() => setPreview(true)}>
               <IconEye />

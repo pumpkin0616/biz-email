@@ -5,6 +5,13 @@ import { isString } from 'lodash';
 import { classnames } from '@core/utils/classnames';
 import { getNodeIdxClassName, getNodeTypeClassName } from '@core/utils';
 
+interface Window {
+  isExport: boolean;//全局变量名
+  transformOssUrl: any;//全局变量名
+}
+
+declare const window: any;
+
 export function getAdapterAttributesString(
   params: Parameters<IBlock['render']>[0]
 ) {
@@ -33,9 +40,9 @@ export function getAdapterAttributesString(
   for (let key in attributes) {
     const keyName = key as keyof typeof attributes;
     let val = attributes[keyName];
-    if (keyName && val && (keyName === 'src' || keyName === 'background-url')) {
+    if (!window.isExport && keyName && val && (keyName === 'src' || keyName === 'background-url')) {
       const oldSrc = val;
-      val = transformOssUrl(val)
+      val = window.transformOssUrl(val)
       console.log(`原图:${oldSrc} 转换图:${val}`)
     }
     if (isString(val) && val) {
