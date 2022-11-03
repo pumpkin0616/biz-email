@@ -7,6 +7,7 @@ import { mergeBlock } from '@core/utils/mergeBlock';
 import { getAdapterAttributesString } from '@core/utils';
 import { BasicBlock } from '@core/components/BasicBlock';
 
+declare const window: any;
 export type ISocial = IBlockData<
   {
     align?: string;
@@ -111,7 +112,12 @@ export const Social: IBlock<ISocial> = createBlock({
       .map((element) => {
         const elementAttributeStr = Object.keys(element)
           .filter((key) => key !== 'content' && element[key as keyof typeof element] !== '') // filter att=""
-          .map((key) => `${key}="${element[key as keyof typeof element]}"`)
+          .map((key) => {
+            if( !window.isExport&&key==='src'){
+              return `${key}="${window.transformOssUrl(element[key as keyof typeof element])}"`
+            }
+            return `${key}="${element[key as keyof typeof element]}"`
+          })
           .join(' ');
         return `
           <mj-social-element ${elementAttributeStr}>${element.content}</mj-social-element>
