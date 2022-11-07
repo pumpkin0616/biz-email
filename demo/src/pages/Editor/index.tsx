@@ -60,6 +60,12 @@ import { useMergeTagsModal } from './components/useMergeTagsModal';
 
 import { useWindowSize } from 'react-use';
 
+interface Window {
+  isExport: boolean;//全局变量名
+}
+
+declare const window: any;
+
 const socialIcons = [
   {
     content: 'facebook',
@@ -267,6 +273,7 @@ export default function Editor() {
   }, [collectionCategory]);
 
   useEffect(() => {
+    window.isExport = false;
     if (id) {
       if (!userId) {
         UserStorage.getAccount().then((account) => {
@@ -301,6 +308,7 @@ export default function Editor() {
       maxWidthOrHeight: 1440,
     });
     return services.common.uploadByQiniu(compressionFile);
+    // return 'https://img1.shopcider.com/hermes/posting/1667380552000-dbrwwd.png'
   };
 
   const onChangeTheme = useCallback((t) => {
@@ -316,6 +324,7 @@ export default function Editor() {
   }, []);
 
   const onExportHtml = (values: IEmailTemplate) => {
+    window.isExport = true;
     pushEvent({ event: 'ExportHtml' });
     const html = mjml(
       JsonToMjml({
@@ -332,6 +341,7 @@ export default function Editor() {
 
     copy(html);
     Message.success('Copied to pasteboard!');
+    window.isExport = false;
   };
 
   const onExportMJML = (values: IEmailTemplate) => {
