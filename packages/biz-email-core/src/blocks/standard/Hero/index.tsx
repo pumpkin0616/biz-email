@@ -40,6 +40,7 @@ export const Hero = createBlock<IHero>({
         padding: '100px 0px 100px 0px',
         'vertical-align': 'top',
         'background-url':'',
+        'css-class':'my-bg-class'
       },
       children: [
         {

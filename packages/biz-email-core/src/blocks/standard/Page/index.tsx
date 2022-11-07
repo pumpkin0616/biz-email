@@ -151,6 +151,11 @@ export const Page = createBlock<IPage>({
         }
 
             </mj-attributes>
+            <mj-style>
+              .my-bg-class td{
+                background-size:100%  !important;
+              }
+            </mj-style>
           </mj-head>
           <mj-body ${getAdapterAttributesString(params)}>`}
 
