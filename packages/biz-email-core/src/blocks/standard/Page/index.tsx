@@ -156,6 +156,79 @@ export const Page = createBlock<IPage>({
                 background-size:contain !important;
               }
             </mj-style>
+            <mj-style>
+            .footer-body {
+              width: 600px;
+              margin: 30px auto 0;
+          }
+        
+          .footer-app-title2 {
+              width: 100%;
+              background-color: #F1F1F1;
+              text-align: center;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 30px;
+              color: #666666;
+          }
+        
+          .footer-big-logo {
+              width: 600px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+          }
+        
+          .footer-ttable {
+              margin: 0 auto;
+              color: white;
+          }
+        
+          .footer-content-placeholder {
+              width: 600px;
+              height: 40px;
+          }
+        
+          .footer-email {
+              text-align: center;
+              width: 600px;
+              color: white;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 20px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+          }
+        
+          .footer-email a {
+              color: white;
+          }
+        
+          .footer-logo {
+              text-align: center;
+          }
+        
+          .footer-logo .logo {
+              width: 30px;
+              display: inline-block;
+          }
+        
+          .footer-bottom {
+              text-align: center;
+              width: 600px;
+              color: white;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 20px;
+              margin-top: 20px;
+              padding-bottom: 20px;
+          }
+            </mj-style>
           </mj-head>
           <mj-body ${getAdapterAttributesString(params)}>`}
 
