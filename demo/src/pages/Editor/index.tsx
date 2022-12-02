@@ -308,7 +308,6 @@ export default function Editor() {
       maxWidthOrHeight: 1440,
     });
     return services.common.uploadByQiniu(compressionFile);
-    // return 'https://img1.shopcider.com/hermes/posting/1667380552000-dbrwwd.png'
   };
 
   const onChangeTheme = useCallback((t) => {
