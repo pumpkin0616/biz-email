@@ -1,4 +1,4 @@
-# Easy email
+# biz email
 
 <br>
 <p align="center">
